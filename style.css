@@ -1,4 +1,6 @@
 #kitty {
-  width: 200px;
-  height: auto;
+  position: fixed;
+  height: 200px;
+  width: auto;
+  top: 0;
 }
