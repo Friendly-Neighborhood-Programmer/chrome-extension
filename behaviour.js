@@ -1,11 +1,13 @@
 let step = 1;
+// add parsing from audio folder
 const phrases = ["MEOW!", "HELLO HUMAN", "PURRRR", "MMMMMM", "UWU"];
 let screenWidth;
 let screenHeight;
 
 window.addEventListener("load", (event) => {
+  setInterval(moveCat, 60);
   document.getElementById("kitty").addEventListener("click", talkCat);
-  setInterval(moveCat, 6);
+  document.getElementById("kitty").addEventListener("click", dragCat);
   screenWidth = screen.width;
   screenHeight = screen.height;
 });
@@ -30,5 +32,13 @@ function moveCat() {
 }
 
 function talkCat() {
+  // play a cat sound effect
+  // https://stackoverflow.com/questions/9419263/how-to-play-audio
   console.log("MEOW!");
+}
+
+function dragCat() {
+  // make cat follow cursor movement
+  // https://stackoverflow.com/questions/7143806/make-an-image-follow-mouse-pointer
+  console.log("dragging");
 }
